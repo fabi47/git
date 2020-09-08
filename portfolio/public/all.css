@@ -1,0 +1,26 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 100px;
+    background-color: #202020;
+    color: white;
+}
+main {
+    display: flex;
+    flex: 1;
+}
+footer {
+    height: 100px;
+    background-color: #c0c0c0;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 100%;
+    }
+}
