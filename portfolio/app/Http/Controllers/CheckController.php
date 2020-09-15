@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class CheckController extends Controller
 {
-    public function index ()
+    public function index (Request $request)
     {
-        return view('check');
-        
+        $date = $request['date_start'];
+        return view('check', compact('date'));
     }
 }
