@@ -8,11 +8,16 @@
     </head>
     <body>
         <header>header</header>
-
         <main>
-            <p>ここに確認画面</p>
+            <p>{{ $date }}</p>
+            <p>{{ $owner }}</p>
+            <form action="/complete" method="post">
+                @csrf
+                <input type="hidden" name="date_start" value="{{ $date }}" id="date_start" name="date_start">
+                <input type="hidden" name="owner" value="{{ $owner }}">
+                <input type="submit" value="OK">
+            </form>
         </main>
-
         <footer>footer</footer>
     </body>
 </html>
