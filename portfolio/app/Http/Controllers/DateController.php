@@ -10,9 +10,12 @@ class DateController extends Controller
         $owner = new \App\Owner;
 
         $owner->name = $request['name'];
-        $owner->updated_at = "2020-09-09 12:00:00";
-        $owner->created_at = "2020-09-09 12:00:00";
-        $owner->car_name = $request['car_name'];  
+        $owner->car_name = $request['car_name'];       
+        $owner->car_number = $request['car_number'];
+        $owner->menutype = $request['menutype'];
+        $owner->updated_at = now();
+        $owner->created_at = now();
+        
         $owner->save();
         
         return view('date', compact('owner'));
